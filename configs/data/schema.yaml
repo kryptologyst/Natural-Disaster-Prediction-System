@@ -1,0 +1,71 @@
+# Data schema configuration
+data_schema:
+  features:
+    seismic_activity:
+      description: "Seismic activity level (Richter scale)"
+      unit: "Richter scale"
+      range: [0, 10]
+      type: "continuous"
+      
+    rainfall:
+      description: "Precipitation amount"
+      unit: "mm"
+      range: [0, 500]
+      type: "continuous"
+      
+    wind_speed:
+      description: "Wind velocity"
+      unit: "km/h"
+      range: [0, 200]
+      type: "continuous"
+      
+    soil_saturation:
+      description: "Soil moisture content"
+      unit: "ratio"
+      range: [0, 1]
+      type: "continuous"
+      
+    temperature:
+      description: "Air temperature"
+      unit: "°C"
+      range: [-50, 50]
+      type: "continuous"
+      
+    humidity:
+      description: "Relative humidity"
+      unit: "%"
+      range: [0, 100]
+      type: "continuous"
+      
+    pressure:
+      description: "Atmospheric pressure"
+      unit: "hPa"
+      range: [800, 1100]
+      type: "continuous"
+      
+    elevation:
+      description: "Height above sea level"
+      unit: "meters"
+      range: [0, 8000]
+      type: "continuous"
+      
+    latitude:
+      description: "Geographic latitude"
+      unit: "degrees"
+      range: [-90, 90]
+      type: "continuous"
+      
+    longitude:
+      description: "Geographic longitude"
+      unit: "degrees"
+      range: [-180, 180]
+      type: "continuous"
+      
+  target:
+    disaster_risk:
+      description: "Binary disaster risk indicator"
+      values: [0, 1]
+      type: "binary"
+      encoding:
+        0: "Normal conditions"
+        1: "Disaster risk"
